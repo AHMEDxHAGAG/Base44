@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-base44-body), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: var(--font-base44-display), var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -122,9 +122,74 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
   }
   html {
     @apply font-sans;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .base44-page {
+    --base44-ink: #1e1e24;
+    --base44-dark: #252525;
+    --base44-button: #312f2f;
+    --base44-button-hover: #433f3f;
+    --base44-cream: #f9f7f4;
+    --base44-warm-gray: #eeeceb;
+    --base44-metric-gray: #e2ded7;
+    --base44-border: #d9d5ce;
+    --base44-muted: #6d6a67;
+    --base44-blue: #3950e6;
+    --base44-orange: #ff6a00;
+    color: var(--base44-ink);
+    background: var(--base44-cream);
+    font-family: var(--font-base44-body), sans-serif;
+    min-width: 0;
+    overflow: clip;
+  }
+
+  .base44-display {
+    font-family: var(--font-base44-display), sans-serif;
+    font-weight: 600;
+  }
+
+  .base44-dot-grid {
+    background-color: var(--base44-cream);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='13'%20height='13'%3E%3Crect%20width='1.5'%20height='1.5'%20fill='%23D8D7D6'%20shape-rendering='crispEdges'/%3E%3C/svg%3E");
+  }
+
+  .base44-grunge {
+    background-image: url("/sites/base44-com-cf167063/root-8a5edab2/textures/grunge-cover.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(100%, 2126px);
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .base44-focus:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .base44-page *,
+  .base44-page *::before,
+  .base44-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
