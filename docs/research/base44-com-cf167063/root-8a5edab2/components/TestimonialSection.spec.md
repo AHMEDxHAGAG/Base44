@@ -6,11 +6,11 @@ References: `testimonial-desktop.png`, `testimonial-mobile.png`.
 
 ## Content
 
-Author label: `Yoav Hornung\nFounder of Veo`.
+Author label: `— Yoav Hornung · Founder, Gift My Book · ex-Fiverr`.
 
-Quote: `“I don't need to do all the cumbersome stuff—hiring a frontend engineer, a backend engineer, a product manager and a designer—everything is in my control now.”`
+Quote: `“It took about a week to come up with a product that works end-to-end.”`
 
-Metrics: `10K+` / `users`; `100%` / `conversion in 6 weeks`; `10x` / `faster time to market`. CTA: `Read full story`.
+Metrics: `1 week` / `to launch`; `$1M ARR` / `in 3 months`; `6-8%` / `conversion`. CTA: `Read full story`.
 
 ## Layout
 

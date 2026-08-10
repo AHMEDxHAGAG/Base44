@@ -292,34 +292,34 @@ export function FaqSection() {
   return (
     <section
       aria-labelledby="faq-heading"
-      className="overflow-hidden bg-white px-[clamp(20px,4.6875vw,90px)] pt-14 pb-[clamp(80px,11.25vw,160px)] min-[1100px]:pt-[clamp(80px,8.333vw,160px)]"
+      className="overflow-hidden bg-white px-[clamp(20px,4.6875vw,90px)] pt-14 pb-[clamp(80px,11.25vw,160px)] max-[767px]:pb-[95px] min-[768px]:max-[1099px]:px-[5.21vw] min-[768px]:max-[1099px]:pt-[10.42vw] min-[768px]:max-[1099px]:pb-[13vw] min-[1100px]:pt-[clamp(80px,8.333vw,160px)]"
     >
       <div className="mx-auto max-w-[1740px] min-[1100px]:grid min-[1100px]:grid-cols-[35%_54.6%] min-[1100px]:justify-between">
         <h2
-          className="base44-display max-w-[500px] text-[clamp(40px,3.96vw,76px)] leading-[1.05] tracking-[-0.04em]"
+          className="base44-display max-w-[500px] text-[clamp(40px,3.96vw,76px)] leading-[1.05] tracking-[-0.04em] min-[768px]:max-[1099px]:max-w-none min-[768px]:max-[1099px]:text-[7.81vw] min-[768px]:max-[1099px]:leading-[8.33vw]"
           id="faq-heading"
         >
           Frequently asked questions
         </h2>
 
-        <div className="mt-14 min-w-0 min-[1100px]:mt-0">
+        <div className="mt-14 min-w-0 min-[768px]:max-[1099px]:mt-[10.42vw] min-[1100px]:mt-0">
           {faqItems.map((item) => {
             const isOpen = openItem === item.id;
             const panelId = `faq-panel-${item.id}`;
             const triggerId = `faq-trigger-${item.id}`;
 
             return (
-              <div className="border-t-2 border-[var(--base44-ink)]" key={item.id}>
+              <div className="border-t-2 border-[var(--base44-ink)] min-[768px]:max-[1099px]:not-last:pb-[46px]" key={item.id}>
                 <h3>
                   <button
                     aria-controls={panelId}
                     aria-expanded={isOpen}
-                    className="base44-focus flex w-full items-center justify-between gap-6 py-8 text-left"
+                    className="base44-focus flex w-full items-center justify-between gap-6 py-8 text-left min-[768px]:max-[1099px]:py-6"
                     id={triggerId}
                     onClick={() => setOpenItem(isOpen ? null : item.id)}
                     type="button"
                   >
-                    <span className="font-heading text-[clamp(22px,1.667vw,32px)] leading-[1.08] font-medium tracking-[-0.02em]">
+                    <span className="font-heading text-[clamp(22px,1.667vw,32px)] leading-[1.08] font-medium tracking-[-0.02em] min-[768px]:max-[1099px]:text-[32px] min-[768px]:max-[1099px]:leading-[40px]">
                       {item.question}
                     </span>
                     {isOpen ? (
@@ -342,7 +342,7 @@ export function FaqSection() {
                 >
                   <div className="min-h-0 overflow-hidden">
                     <div
-                      className={`max-w-[832px] pb-8 text-[clamp(16px,.9375vw,18px)] leading-[1.44] font-normal transition-opacity duration-300 ease-out motion-reduce:transition-none ${
+                      className={`max-w-[832px] pb-8 text-[clamp(16px,.9375vw,18px)] leading-[1.44] font-normal transition-opacity duration-300 ease-out motion-reduce:transition-none min-[768px]:max-[1099px]:pt-[20px] min-[768px]:max-[1099px]:pr-[68px] min-[768px]:max-[1099px]:pb-0 min-[768px]:max-[1099px]:text-[18px] min-[768px]:max-[1099px]:leading-[25.92px] ${
                         isOpen ? "opacity-100" : "opacity-0"
                       }`}
                     >

@@ -378,11 +378,11 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 h-[54px] transition-colors duration-300 md:h-[76px] min-[1431px]:h-[85px] ${
+        className={`fixed inset-x-0 top-0 z-50 h-[54px] transition-colors duration-300 min-[768px]:max-[1430px]:h-[76px] min-[1431px]:h-[85px] ${
           isSolidHeader ? "bg-white" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-full max-w-[1920px] items-center px-5 md:px-[34px] min-[1431px]:px-10">
+        <div className="mx-auto flex h-full max-w-[1920px] items-center px-5 min-[768px]:max-[1430px]:px-[34px] min-[1431px]:px-10">
           <div className="flex min-w-0 items-center min-[1431px]:gap-[39px]">
             <a
               aria-label="Base44 home"

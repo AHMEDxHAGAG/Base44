@@ -235,6 +235,15 @@ const heroImages: Record<HeroTab, HeroImage[]> = {
   ],
 };
 
+const revealDelayClassNames = [
+  "delay-[0ms]",
+  "delay-[50ms]",
+  "delay-[100ms]",
+  "delay-[150ms]",
+  "delay-[200ms]",
+  "delay-[250ms]",
+] as const;
+
 export function HeroSection() {
   const [activeTab, setActiveTab] = useState<HeroTab>("websites");
   const [buildMenuOpen, setBuildMenuOpen] = useState(false);
@@ -327,18 +336,18 @@ export function HeroSection() {
   };
 
   return (
-    <section className="base44-dot-grid min-h-svh overflow-hidden text-[#202027]">
-      <div className="mx-auto max-w-[1920px] pt-[103px] pb-9 min-[1024px]:pt-[9.375vw] min-[1024px]:pb-[4.1667vw]">
-        <h1 className="mx-auto max-w-[calc(100%-40px)] text-center font-heading text-[clamp(46px,6.51vw,125px)] leading-[1.05] font-semibold tracking-[-0.04em] text-balance min-[1024px]:max-w-none">
+    <section className="base44-dot-grid min-h-svh overflow-hidden text-[#202027] max-[767px]:min-h-[852px]">
+      <div className="mx-auto max-w-[1920px] pt-[103px] pb-9 min-[768px]:max-[1023px]:pt-[21.6vw] min-[768px]:max-[1023px]:pb-[8.33vw] min-[1024px]:pt-[9.375vw] min-[1024px]:pb-[4.1667vw]">
+        <h1 className="mx-auto max-w-[calc(100%-40px)] text-center font-heading text-[clamp(46px,6.51vw,125px)] leading-[1.05] font-semibold tracking-[-0.04em] text-balance min-[768px]:max-[1023px]:max-w-[85.3vw] min-[768px]:max-[1023px]:text-[12.25vw] min-[768px]:max-[1023px]:leading-[0.98] min-[1024px]:max-w-none">
           Every builder needs a base
         </h1>
 
-        <p className="mx-auto mt-6 max-w-[335px] text-center text-[clamp(17px,1.46vw,28px)] leading-[1.42] font-normal min-[1024px]:mt-6 min-[1024px]:max-w-[719px]">
+        <p className="mx-auto mt-6 max-w-[335px] text-center text-[clamp(17px,1.46vw,28px)] leading-[1.42] font-normal min-[768px]:max-[1023px]:mt-[6.12vw] min-[768px]:max-[1023px]:max-w-[70.47vw] min-[768px]:max-[1023px]:text-[3.064vw] min-[768px]:max-[1023px]:leading-[1.33] min-[1024px]:mt-6 min-[1024px]:max-w-[719px]">
           Build your own apps, websites, products and AI agents on Base44 using
           your own words. Get ahead — and make sure it stays that way.
         </p>
 
-        <div className="relative mx-auto mt-[38px] flex h-[151px] w-[calc(100%-40px)] flex-col rounded-lg bg-white min-[1024px]:mt-[30px] min-[1024px]:w-[min(38.5417vw,740px)]">
+        <div className="relative mx-auto mt-[38px] flex h-[151px] w-[calc(100%-40px)] flex-col rounded-lg bg-white min-[768px]:max-[1023px]:w-[85.3vw] min-[1024px]:mt-[30px] min-[1024px]:w-[min(38.5417vw,740px)]">
           <textarea
             aria-label="Describe what you want to build"
             className="min-h-0 flex-1 resize-none border-0 bg-transparent px-6 pt-[22px] text-[16px]/[24px] text-[#29282f] outline-none placeholder:text-[#9a9898]"
@@ -480,13 +489,7 @@ export function HeroSection() {
             {heroImages[activeTab].map((image, index) => (
               <div
                 key={`${activeTab}-${image.src}`}
-                className={`relative shrink-0 transition-[clip-path] duration-[360ms] ease-[cubic-bezier(.22,1,.36,1)] motion-reduce:transition-none ${image.frameClassName}`}
-                style={{
-                  clipPath: prefersReducedMotion || isRevealed
-                    ? "inset(0 0 0 0)"
-                    : "inset(0 100% 0 0)",
-                  transitionDelay: `${index * 50}ms`,
-                }}
+                className={`relative shrink-0 transition-[clip-path] duration-[360ms] ease-[cubic-bezier(.22,1,.36,1)] motion-reduce:transition-none ${image.frameClassName} ${revealDelayClassNames[index]} ${prefersReducedMotion || isRevealed ? "[clip-path:inset(0_0_0_0)]" : "[clip-path:inset(0_100%_0_0)]"}`}
               >
                 <span
                   aria-hidden="true"
@@ -500,6 +503,7 @@ export function HeroSection() {
                   alt={image.alt}
                   className="h-full w-full object-cover"
                   height={image.height}
+                  loading="eager"
                   sizes="(max-width: 767px) 64vw, 26vw"
                   src={image.src}
                   width={image.width}

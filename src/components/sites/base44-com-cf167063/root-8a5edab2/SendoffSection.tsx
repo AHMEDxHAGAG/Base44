@@ -12,7 +12,7 @@ export function SendoffSection() {
   return (
     <section
       aria-labelledby="sendoff-section-heading"
-      className="relative h-[679px] overflow-hidden bg-[#3950e6] text-white min-[1100px]:h-[628px]"
+      className="relative h-[663.64px] overflow-hidden bg-[#3950e6] text-white min-[768px]:max-[1099px]:h-[118.92vw] min-[1100px]:h-[628px]"
     >
       <div
         aria-hidden="true"
@@ -21,7 +21,7 @@ export function SendoffSection() {
 
       <h2
         id="sendoff-section-heading"
-        className="base44-display relative z-30 mx-auto max-w-[672px] pt-[96px] text-center text-[clamp(52px,7.02vw,100px)] leading-[0.95] tracking-[-0.04em] min-[1100px]:pt-[35px]"
+        className="base44-display relative z-30 mx-auto max-w-[672px] pt-[96px] text-center text-[clamp(52px,7.02vw,100px)] leading-[0.95] tracking-[-0.04em] min-[768px]:max-[1099px]:pt-[18.9vw] min-[1100px]:pt-[35px]"
       >
         <span className="whitespace-nowrap">Go ahead.</span>
         <br />
@@ -94,7 +94,7 @@ export function SendoffSection() {
       </div>
 
       <a
-        className="group absolute bottom-[105px] left-1/2 z-30 inline-flex -translate-x-1/2 items-center gap-[8px] whitespace-nowrap text-white min-[1100px]:bottom-[50px] min-[1100px]:gap-[14px] base44-focus"
+        className="group absolute bottom-[105px] left-1/2 z-30 inline-flex -translate-x-1/2 items-center gap-[8px] whitespace-nowrap text-white min-[768px]:max-[1099px]:bottom-[18.9vw] min-[1100px]:bottom-[50px] min-[1100px]:gap-[14px] base44-focus"
         href={base44BuildUrl}
       >
         <ArrowCircleIcon className="size-[clamp(28px,3.125vw,44px)] shrink-0 transition-transform duration-200 group-hover:translate-x-[6px] group-focus-visible:translate-x-[6px]" />

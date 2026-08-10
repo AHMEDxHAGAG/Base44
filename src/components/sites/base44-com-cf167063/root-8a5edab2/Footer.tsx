@@ -164,7 +164,7 @@ function RedditIcon(props: SVGProps<SVGSVGElement>) {
 
 export function Footer() {
   return (
-    <footer className="bg-white px-5 py-[clamp(60px,6.25vw,90px)] md:px-[clamp(40px,6.316vw,90px)]">
+    <footer className="bg-white px-5 py-[clamp(60px,6.25vw,90px)] max-[767px]:pb-[104px] md:px-[clamp(40px,6.316vw,90px)]">
       <div className="mx-auto max-w-[1740px]">
         <div className="min-[1280px]:grid min-[1280px]:grid-cols-[minmax(0,334px)_minmax(0,838px)] min-[1280px]:justify-between">
           <div className="max-w-[334px]">
@@ -203,14 +203,14 @@ export function Footer() {
 
           <nav
             aria-label="Footer navigation"
-            className="mt-48 grid grid-cols-1 gap-y-14 md:grid-cols-2 md:gap-x-12 min-[1280px]:mt-0 min-[1280px]:grid-cols-4 min-[1280px]:gap-x-8"
+            className="mt-48 grid grid-cols-1 gap-y-14 min-[768px]:max-[1279px]:grid-cols-2 min-[768px]:max-[1279px]:gap-x-12 min-[1280px]:mt-0 min-[1280px]:grid-cols-4 min-[1280px]:gap-x-8"
           >
             {navigationGroups.map((group) => (
               <div key={group.label}>
                 <h2 className="font-heading text-[18px] leading-6 font-medium">
                   {group.label}
                 </h2>
-                <ul className="mt-7 space-y-2" role="list">
+                <ul className="mt-7 space-y-[6px]" role="list">
                   {group.links.map((link) => (
                     <li key={link.label}>
                       <a className={footerLinkClassName} href={link.href}>

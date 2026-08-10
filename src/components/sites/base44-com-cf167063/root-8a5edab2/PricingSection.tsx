@@ -64,24 +64,24 @@ export function PricingSection() {
   return (
     <section
       aria-labelledby="pricing-heading"
-      className="base44-dot-grid overflow-hidden px-[clamp(20px,4.6875vw,90px)] py-[clamp(50px,6.25vw,120px)]"
+      className="base44-dot-grid overflow-hidden px-[clamp(20px,4.6875vw,90px)] py-[clamp(50px,6.25vw,120px)] min-[768px]:max-[1099px]:px-[5.21vw] min-[768px]:max-[1099px]:py-[10.42vw]"
     >
       <div className="mx-auto max-w-[1740px] min-[1100px]:grid min-[1100px]:grid-cols-[30%_50.8%] min-[1100px]:justify-between">
         <div>
           <h2
-            className="base44-display text-[clamp(40px,3.96vw,76px)] leading-[1.05] tracking-[-0.04em]"
+            className="base44-display text-[12.288vw]/[13.357vw] tracking-[-0.04em] min-[768px]:max-[1099px]:text-[12.25vw] min-[768px]:max-[1099px]:leading-[0.979] min-[1100px]:text-[clamp(40px,3.96vw,76px)] min-[1100px]:leading-[1.05]"
             id="pricing-heading"
           >
             <span className="block">Choose</span>
             <span className="block">your plan</span>
           </h2>
-          <p className="mt-8 max-w-[390px] text-[clamp(16px,1.25vw,24px)] leading-[1.25] tracking-[-0.01em] min-[1100px]:mt-10">
+          <p className="mt-5 max-w-[390px] text-[5.346vw]/[6.148vw] tracking-[-0.01em] min-[768px]:max-[1099px]:mt-[5.73vw] min-[768px]:max-[1099px]:text-[3.32vw] min-[768px]:max-[1099px]:leading-[1.385] min-[1100px]:mt-10 min-[1100px]:text-[clamp(16px,1.25vw,24px)] min-[1100px]:leading-[1.25]">
             Built for where you are, and where you&apos;re going.
           </p>
         </div>
 
-        <div className="mt-14 min-w-0 min-[1100px]:mt-0">
-          <article className="flex min-h-[438px] min-w-0 flex-col bg-white p-[30px] sm:grid sm:min-h-[276px] sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] sm:grid-rows-[auto_auto_1fr_auto] sm:gap-x-[30px]">
+        <div className="mt-[50px] min-w-0 min-[768px]:max-[1099px]:mt-[10.42vw] min-[1100px]:mt-0">
+          <article className="flex min-h-[438px] min-w-0 flex-col bg-white p-[30px] sm:grid sm:min-h-[276px] sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] sm:grid-rows-[auto_auto_1fr_auto] sm:gap-x-[30px] min-[768px]:max-[1099px]:min-h-[372px]! min-[768px]:max-[1099px]:p-[5.21vw]">
             <h3 className="font-heading text-[clamp(22px,1.667vw,32px)] leading-[1.08] font-medium tracking-[-0.02em] sm:col-start-1 sm:row-start-1">
               Start for free
             </h3>
@@ -105,7 +105,7 @@ export function PricingSection() {
             </div>
           </article>
 
-          <article className="mt-6 flex min-h-[480px] min-w-0 flex-col bg-[#ff6a00] p-[30px] sm:grid sm:min-h-[285px] sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] sm:grid-rows-[auto_auto_1fr_auto] sm:gap-x-[30px]">
+          <article className="mt-12 flex min-h-[508px] min-w-0 flex-col bg-[#ff6a00] p-[30px] sm:grid sm:min-h-[285px] sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] sm:grid-rows-[auto_auto_1fr_auto] sm:gap-x-[30px] min-[768px]:max-[1099px]:mt-[20px] min-[768px]:max-[1099px]:min-h-[372px]! min-[768px]:max-[1099px]:p-[5.21vw] min-[1100px]:mt-6">
             <h3 className="font-heading text-[clamp(22px,1.667vw,32px)] leading-[1.08] font-medium tracking-[-0.02em] sm:col-start-1 sm:row-start-1">
               Paid plans from
             </h3>
